@@ -1,0 +1,53 @@
+.apartment {
+  padding: 40px 0;
+}
+
+.apartment__column {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 100px;
+  @include mobile {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+  }
+}
+
+.apartment__title + .apartment__subtitle {
+  margin-top: 40px;
+}
+
+.apartment__actions {
+  margin-top: 40px;
+}
+
+.apartment__wysiwyg {
+  margin-top: 65px;
+  max-width: 677px;
+}
+
+.apartment__price {
+  margin-top: 80px;
+}
+
+.apartment__scheme {
+  background-color: var(--color-gray-400);
+  overflow: hidden;
+  border-radius: 40px;
+  width: 100%;
+}
+
+.apartment__photos {
+  margin-top: 26px;
+  gap: 26px;
+}
+
+.apartment__photo {
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.apartment__photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -1,0 +1,121 @@
+.wysiwyg {
+  font-family: var(--font-main);
+  color: var(--color-black);
+  font-size: responsive 20px 25px;
+  font-range: 360px 1440px;
+}
+
+.wysiwyg h1,
+.wysiwyg h2,
+.wysiwyg h3,
+.wysiwyg h4,
+.wysiwyg h5,
+.wysiwyg h6 {
+  font-family: var(--font-main);
+  font-weight: bold;
+  margin: 0 0 24px;
+  color: var(--color-black);
+}
+
+.wysiwyg h2 {
+  font-size: responsive 30px 40px;
+  font-range: 375px 1024px;
+}
+
+.wysiwyg h3 {
+  font-size: responsive 25px 30px;
+  font-range: 375px 1024px
+}
+
+.wysiwyg h4 {
+  font-size: 20px;
+}
+
+.wysiwyg h6 {
+  font-size: 20px;
+  text-transform: none;
+}
+
+.wysiwyg ul,
+.wysiwyg ol {
+  padding-left: 40px;
+  font-size: responsive 20px 25px;
+  font-range: 360px 1440px;
+  font-weight: 400;
+  margin-left: 0;
+}
+
+.wysiwyg ul li ~ li,
+.wysiwyg ol li ~ li {
+  margin-top: 10px;
+}
+
+.wysiwyg.wysiwyg--delivery ul li ~ li {
+  margin-top: 6px;
+}
+
+.wysiwyg ul li {
+  position: relative;
+  list-style-type: none;
+}
+
+.wysiwyg ul li::before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjciIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAyNyAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTI2LjI1MDEgOC41MzAzNUMyNi42NDA2IDguMTM5ODIgMjYuNjQwNiA3LjUwNjY2IDI2LjI1MDEgNy4xMTYxNEwxOS44ODYxIDAuNzUyMTc0QzE5LjQ5NTYgMC4zNjE2NSAxOC44NjI0IDAuMzYxNjUgMTguNDcxOSAwLjc1MjE3NEMxOC4wODE0IDEuMTQyNyAxOC4wODE0IDEuNzc1ODYgMTguNDcxOSAyLjE2NjM5TDI0LjEyODggNy44MjMyNEwxOC40NzE5IDEzLjQ4MDFDMTguMDgxNCAxMy44NzA2IDE4LjA4MTQgMTQuNTAzOCAxOC40NzE5IDE0Ljg5NDNDMTguODYyNCAxNS4yODQ4IDE5LjQ5NTYgMTUuMjg0OCAxOS44ODYxIDE0Ljg5NDNMMjYuMjUwMSA4LjUzMDM1Wk0wLjI0NjA5NCA4LjgyMzI0SDI1LjU0M1Y2LjgyMzI0SDAuMjQ2MDk0VjguODIzMjRaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K");
+  margin-right: 15px;
+  position: absolute;
+  left: -40px;
+}
+
+.wysiwyg table {
+  width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid var(--color-gray);
+  border-collapse: collapse;
+}
+
+.wysiwyg table th {
+  font-weight: bold;
+  padding: 5px;
+  background: #efefef;
+  border: 1px solid var(--color-gray);
+}
+
+.wysiwyg table td {
+  border: 1px solid var(--color-gray);
+  padding: 5px;
+}
+
+.wysiwyg.wysiwyg--delivery ul li {
+  list-style-type: disc;
+}
+
+.wysiwyg.wysiwyg--delivery ul li::before {
+  content: none;
+}
+
+.wysiwyg ul li > ul,
+.wysiwyg ol li > ol {
+  margin-top: 20px;
+}
+
+.wysiwyg p {
+  margin: 24px 0;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.wysiwyg a {
+  text-decoration: underline;
+  color: var(--color-dark);
+  transition: color ease .2s;
+}
+
+.wysiwyg a:hover {
+  color: var(--accent);
+}
+
+.wysiwyg.wysiwyg--apartment ul,
+.wysiwyg.wysiwyg--apartment ol {
+  column-count: 2;
+}

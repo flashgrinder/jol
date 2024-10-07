@@ -1,16 +1,46 @@
+@@include('head.html')
+<div class="header-top js-menu js-menu-main-screen mobile-nav__menu">
+    <div class="header-top__wrap container">
+        <nav class="header-top__menu">
+            <ul class="header-top__menu-list d-flex flex-justify-sb flex-align-center">
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        Про недвижимость
+                    </a>
+                </li>
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        Каталог
+                    </a>
+                </li>
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        О нас
+                    </a>
+                </li>
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
 <header class="header">
-    <div class="container">
-        <div class="header__row">
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="active">Главная</a></li>
-		            <li><a href="docs.html">Документация</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
+    <div class="mobile-nav">
+        <div class="mobile-nav__outer container">
+            <div class="mobile-nav__inner d-flex flex-justify-sb flex-align-center">
+                <a href="/" class="mobile-nav__logo">
+                    <img src="./img/logo.svg" alt=""
+                         class="mobile-nav__logo-img">
+                </a>
+                <button class="mobile-nav__btn mobile-nav__btn--header js-mobile-nav-btn">
+                    <div class="mobile-nav__btn-icon js-mobile-nav-icon"></div>
+                </button>
+            </div>
         </div>
     </div>
 </header>
 @@include('mobile-nav.html')
+<main class="main">

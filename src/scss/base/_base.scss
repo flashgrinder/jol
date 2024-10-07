@@ -2,11 +2,12 @@ html, body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	scrollbar-gutter: stable;
 }
 
 html {
 	scroll-behavior: smooth;
-	background-color: rgb(39, 39, 39);
+	background-color: var(--color-white);
 }
 
 body {

@@ -1,16 +1,137 @@
 .header {
-	background-color: #c0e4f4;
-	padding: 50px 0;
-
-	&__row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+	//position: sticky;
+	position: absolute;
+	width: 100%;
+	top: -100%;
+	z-index: 101;
+	background-color: var(--color-white);
+	opacity: 0;
+	visibility: hidden;
+	&.can-animate {
+		transition: transform .3s ease, visibility .3s linear, opacity .3s linear;
+	}
+	&.is-fixed {
+		top: 0;
+		position: fixed;
+		transform: translate3d(0, 0%, 0);
+		opacity: 1;
+		visibility: visible;
+	}
+	&.scroll-up {
+		transform: translate3d(0, 0, 0);
 	}
 }
 
-.header__nav {
+.header-top {
+	background-color: var(--color-white);
+	padding: 16px 0;
+}
+
+.header-top__menu-list {
+	font-family: var(--font-main);
+	font-size: 25px;
+	font-weight: normal;
+	color: var(--color-dark);
+}
+
+.header__menu-link,
+.header-top__menu-link {
+	color: inherit;
+	transition: color var(--hover-time) ease;
+}
+
+.header__menu-link:hover,
+.header-top__menu-link:hover {
+	color: var(--accent);
+}
+
+.header__main {
+	padding: 24px 0;
+	gap: 50px;
+	@include to(1200px) {
+		gap: 25px;
+	}
+}
+
+//.header__main,
+//.header__bottom {
+//	@include tablet {
+//		display: none;
+//	}
+//}
+
+.header__actions {
+	gap: 12px;
+}
+
+.header__menu-list {
+	font-family: var(--font-bebas);
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: var(--color-dark);
+}
+
+.header-top__wrap.container {
 	@include tablet {
-		display: none;
+		padding: 0;
 	}
 }
+
+.header__button-mobile-wrap {
+	@include tablet {
+		padding: 24px 90px 24px 32px;
+		border-bottom: 1px solid #CCD2E3;
+	}
+}
+
+.header__button-mobile {
+	//display: none;
+	font-family: var(--font-bebas);
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+	color: white;
+	background-color: var(--color-dark);
+	padding: 21px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	max-width: 225px;
+	width: 100%;
+	transition: background-color var(--hover-time) ease;
+	//@include tablet {
+		display: inline-flex;
+	//}
+}
+
+.header__button-mobile-icon {
+	fill: transparent;
+	stroke: var(--color-white);
+}
+
+.header__mobile-bottom {
+	display: none;
+	@include tablet {
+		display: block;
+		padding: 24px 32px;
+		border-top: 1px solid #CCD2E3;
+	}
+}
+
+.header__mobile-bottom .header__button {
+	margin-top: 16px;
+}
+
+//.header {
+//	position: absolute;
+//	width: 100%;
+//	display: flex;
+//	align-items: center;
+//	justify-content: center;
+//	background: rgba(255, 255, 255, 0.4);
+//
+//}

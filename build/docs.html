@@ -13,28 +13,72 @@
 </head>
 
 <body>
-    <header class="header">
-    <div class="container">
-        <div class="header__row">
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li><a href="index.html" class="active">Главная</a></li>
-                    <li><a href="docs.html">Документация</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jol LP</title>
+  <link rel="stylesheet" href="./css/main.css" />
+
+  <link rel="icon" type="image/x-icon" href="./img/favicons/favicon.svg">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+</head>
+
+<body>
+<div class="header-top js-menu js-menu-main-screen mobile-nav__menu">
+    <div class="header-top__wrap container">
+        <nav class="header-top__menu">
+            <ul class="header-top__menu-list d-flex flex-justify-sb flex-align-center">
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        Про недвижимость
+                    </a>
+                </li>
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        Каталог
+                    </a>
+                </li>
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        О&#160;нас
+                    </a>
+                </li>
+                <li class="header-top__menu-item">
+                    <a href="/" class="header-top__menu-link">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<header class="header">
+    <div class="mobile-nav">
+        <div class="mobile-nav__outer container">
+            <div class="mobile-nav__inner d-flex flex-justify-sb flex-align-center">
+                <a href="/" class="mobile-nav__logo">
+                    <img src="./img/logo.svg" alt=""
+                         class="mobile-nav__logo-img">
+                </a>
+                <button class="mobile-nav__btn mobile-nav__btn--header js-mobile-nav-btn">
+                    <div class="mobile-nav__btn-icon js-mobile-nav-icon"></div>
+                </button>
+            </div>
         </div>
     </div>
 </header>
-<div class="mobile-nav">
-    <ul class="mobile-nav__list">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="docs.html">Документация</a></li>
-    </ul>
-</div>
+<!--<div class="mobile-nav js-menu">-->
+<!--	<ul class="mobile-nav__list">-->
+<!--		<li><a href="index.html">Главная</a></li>-->
+<!--		<li><a href="docs.html">Документация</a></li>-->
+<!--	</ul>-->
+<!--</div>-->
 
+<main class="main">
     <main class="docs">
     <section>
         <div class="container">
@@ -285,14 +329,17 @@
     </div>
 </section>
 </main>
-    <footer class="footer">
+    </main>
+<footer class="footer">
     <div class="container">
         <div class="footer__copyright">
-            <p>За&#160;основу взята сборка от&#160;<a href="https://webcademy.ru" target="_blank">webcademy.ru</a></p>
+            <p>Тестовое задание для JOL Agency</p>
         </div>
     </div>
 </footer>
-
+<script src="./js/index.bundle.js"></script>
+</body>
+</html>
     <script src="./js/index.bundle.js"></script>
 </body>
 
