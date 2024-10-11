@@ -1,0 +1,27 @@
+.consult {
+  background-color: #F0F6FF;
+  padding: 137px 0 32px;
+  @include mobile {
+    padding: 100px 0 50px;
+  }
+}
+
+.consult__subtitle {
+  max-width: 1294px;
+  margin: 10px auto 54px;
+  @include mobile {
+    margin: 15px auto 40px;
+  }
+}
+
+.consult__action {
+  text-align: center;
+}
+
+.consult__text {
+  margin-top: 25px;
+  @include mobile {
+    font-size: 10px;
+    color: #828181;
+  }
+}

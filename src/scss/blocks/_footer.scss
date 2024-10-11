@@ -1,26 +1,93 @@
 .footer {
-	background-color: rgb(39, 39, 39);
-	padding: 50px 0;
-	font-size: 32px;
-    color: #fff;
-
-	h1 {
-		font-size: 32px;
-	}
-
-	a {
-		// color: var(--link-color);
-		color: #fff;
-		text-decoration: underline;
-	}
-
-	@media (max-width: 1200px) {
-		font-size: 26px;
+	background-color: var(--color-black);
+	padding: 60px 0;
+	@include mobile {
+		padding: 150px 0 50px;
 	}
 }
 
-.footer__copyright {
-	padding: 10px 0;
-	font-size: 16px;
+.footer__menu {
+	font-family: var(--font-main);
+	font-weight: normal;
+	font-size: responsive 20px 30px;
+	font-range: 360px 1024px;
+	color: var(--color-white);
+	@include mobile {
+		display: none;
+	}
+}
 
+.footer__menu-list {
+	display: flex;
+	gap: 24px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer__menu-link {
+	color: inherit;
+}
+
+.footer__bottom {
+	margin-top: 250px;
+	@include mobile {
+		margin-top: 0;
+		flex-direction: column;
+		gap: 75px;
+	}
+}
+
+.footer__contacts {
+	@include mobile {
+		text-align: center;
+	}
+}
+
+.footer__contacts-text {
+	display: none;
+	@include mobile {
+		display: block;
+		margin-bottom: 10px;
+	}
+}
+
+.footer__contact {
+	color: inherit;
+	display: block;
+}
+
+.footer__contacts > .footer__contact + .footer__contact {
+	margin-top: 8px;
+}
+
+.footer__contacts-wrap {
+	margin-top: 10px;
+}
+
+.footer__contacts-wrap .footer__contact + .footer__contact {
+	padding-left: 10px;
+	margin-left: 10px;
+	border-left: 1px solid var(--color-white);
+}
+
+.footer__logo {
+	@include mobile {
+		order: -1;
+		max-width: 170px;
+	}
+}
+
+.footer__button-up {
+	width: 78px;
+	height: 78px;
+	background-color: var(--color-white);
+	border-radius: 50%;
+	@include mobile {
+		display: none;
+	}
+}
+
+.footer__button-up-icon {
+	fill: transparent;
+	stroke: var(--color-black);
 }

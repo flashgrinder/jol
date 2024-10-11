@@ -19,7 +19,14 @@ function gallerySlider () {
                 arrow : 'splide__arrow gallery__splide-arrow',
                 prev  : 'splide__arrow--prev gallery__splide-arrow--prev',
                 next  : 'splide__arrow--next gallery__splide-arrow--next',
+                pagination: 'splide__pagination gallery__pagination',
+                page      : 'splide__pagination__page gallery__pagination-page',
             },
+            breakpoints: {
+                768: {
+                    pagination: true
+                },
+            }
         } );
         gallerySlider.mount();
     }

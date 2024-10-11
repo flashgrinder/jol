@@ -20,6 +20,11 @@
   padding: 25px 150px 25px 48px;
   color: var(--color-black);
   border: 2px solid var(--color-dark-100);
+  @include mobile {
+    padding: 13px 70px 13px 20px;
+    font-size: 15px;
+    border-width: 1px;
+  }
 }
 
 .button--availability .button__icon {
@@ -34,12 +39,32 @@
   height: 92px;
   background: var(--color-dark);
   transform: translateX(0);
+  @include mobile {
+    top: 0;
+    width: 46px;
+    height: 46px;
+  }
 }
 
 .button--availability .button__phone-icon {
   fill: white;
   width: 37px;
   height: 41px;
+  @include mobile {
+    width: 20px;
+    height: 23px;
+  }
+}
+
+.button--availability .button__home-icon {
+  fill: white;
+  width: 49px;
+  height: 49px;
+  margin-top: -5px;
+  @include mobile {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 .button--availability:hover .button__icon,

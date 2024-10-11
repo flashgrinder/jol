@@ -9,7 +9,7 @@
 	--spacing: 6px;
 
 	--color: var(--color-gray);
-	--radius: 4px;
+	//--radius: 4px;
 
 	/* Dynamic height and width */
 	height: calc(var(--line-height) * 3 + var(--spacing) * 2);
@@ -33,7 +33,7 @@
 	width: var(--width);
 	height: var(--line-height);
 	background-color: var(--color);
-	border-radius: var(--radius);
+	//border-radius: var(--radius);
 }
 
 .mobile-nav__btn-icon::before,
@@ -98,4 +98,11 @@
 
 .mobile-nav__btn--main-screen {
 	z-index: 99;
+	@include mobile {
+		--width: 26px;
+		--height: 20px;
+		--spacing: 4px;
+		--line-height: 3px;
+		--color: #5A5757;
+	}
 }

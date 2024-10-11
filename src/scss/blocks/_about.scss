@@ -1,0 +1,37 @@
+.about {
+  padding-top: 37px;
+  @include mobile {
+    background-color: #F0F6FF;
+    padding-top: 80px;
+  }
+}
+
+.about__title {
+  font-size: responsive 38px 95px;
+  font-range: 375px 1024px;
+  text-align: center;
+  @include mobile {
+    text-align: left;
+  }
+}
+
+.about__title-accent {
+  @include mobile {
+    display: block;
+  }
+}
+
+.about__text {
+  max-width: 1367px;
+  margin: 44px auto 47px;
+  @include mobile {
+    margin: 30px auto 25px;
+  }
+}
+
+.about__img {
+  width: 100%;
+  @include mobile {
+    min-height: 350px;
+  }
+}

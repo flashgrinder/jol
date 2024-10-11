@@ -11,9 +11,13 @@
     &--gray {
       color: var(--color-gray);
     }
+    &--big {
+      font-size: responsive 20px 30px;
+      font-range: 360px 1024px;
+    }
     &--large {
       font-size: responsive 20px 25px;
-      font-range: 360px 1440px;
+      font-range: 360px 1024px;
     }
     &--medium {
       font-size: 20px;
