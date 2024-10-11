@@ -1,5 +1,5 @@
 {
-	"name": "zspa",
+	"name": "jol_lp",
 	"version": "1.0.0",
 	"author": "Georgii Filipov",
 	"license": "ISC",
@@ -60,7 +60,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/flashgrinder/zspa.git"
+		"url": "git+ssh://git@github.com/flashgrinder/jol_lp.git"
 	},
 	"bugs": {
 		"url": "https://github.com/flashgrinder/jol_lp/issues"
