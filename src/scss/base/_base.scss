@@ -3,6 +3,7 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	scrollbar-gutter: stable;
+	overflow-x: hidden;
 }
 
 html {
@@ -15,7 +16,7 @@ body {
 	background-color: var(--page-bg);
 	color: var(--text-color);
 	font-family: var(--font-main);
-	overflow-x: hidden;
+
 }
 
 img {

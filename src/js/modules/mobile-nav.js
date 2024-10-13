@@ -11,11 +11,13 @@ function mobileNav() {
 		nav.classList.toggle('is-open');
 		menuIcon.classList.toggle('is-active');
 		document.body.classList.toggle('no-scroll');
+		document.html.style.overflow = 'hidden';
 	};
 	navBtnMainScreen.onclick = function () {
 		navMainScreen.classList.toggle('is-open');
 		menuIconMainScreen.classList.toggle('is-active');
 		document.body.classList.toggle('no-scroll');
+		document.body.parentNode.classList.toggle('no-scroll');
 	};
 
 	const header = document.querySelector('.header');

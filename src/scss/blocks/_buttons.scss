@@ -158,3 +158,18 @@
   width: 14px;
   height: 15px;
 }
+
+.button--form {
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--color-white);
+  padding: 13px 60px;
+  background-color: var(--accent-title);
+  border-radius: 4px;
+}
+
+.button--form:hover,
+.button--form:target,
+.button--form:focus {
+  opacity: .9;
+}

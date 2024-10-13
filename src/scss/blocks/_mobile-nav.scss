@@ -25,6 +25,9 @@
 	overflow-y: auto;
 	top: 0;
 	box-shadow: 1px 0px 5px 0px;
+	@include mobile {
+		top: 83px;
+	}
 	@include mobileXS {
 		max-width: 100%;
 	}
