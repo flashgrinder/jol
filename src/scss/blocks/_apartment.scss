@@ -2,38 +2,127 @@
   padding: 40px 0;
 }
 
+.apartment.apartment--revert .apartment__photo-info {
+  order: -1;
+  @include mobile {
+    order: 0;
+  }
+}
+
+.apartment.apartment--vertical .apartment__photo-info--vertical {
+  display: flex;
+  gap: 20px;
+  @include mobile {
+    display: none;
+  }
+}
+
+.apartment.apartment--vertical .apartment__photo-info--vertical .apartment__photos {
+  margin-top: 0;
+  flex-direction: column;
+}
+
+.apartment.apartment--vertical .apartment__column {
+  grid-template-columns: minmax(500px, 660px) minmax(900px, 1fr);
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apartment.apartment--vertical.apartment--revert .apartment__column {
+  grid-template-columns: minmax(900px, 1fr) minmax(500px, 660px);
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+}
+
+.apartment.apartment--vertical .apartment__photo {
+  height: 100%;
+  max-width: 433px;
+}
+
 .apartment__column {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 100px;
+  gap: 50px;
+  justify-items: stretch;
   @include mobile {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
   }
 }
 
+.apartment__info {
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .apartment__title + .apartment__subtitle {
   margin-top: 40px;
+  @include mobile {
+    margin-top: 5px;
+  }
+}
+
+.apartment__subtitle + .apartment__subtitle {
+  margin-top: 15px;
 }
 
 .apartment__actions {
   margin-top: 40px;
+  @include mobile {
+    order: 1;
+    align-self: center;
+  }
 }
 
-.apartment__wysiwyg {
+.apartment__wysiwyg.wysiwyg {
   margin-top: 65px;
   max-width: 677px;
+  @include mobile {
+    margin-top: 30px;
+  }
+}
+
+.apartment__wysiwyg.wysiwyg ul {
+  margin-top: 50px;
+  @include mobile {
+    font-size: 13px;
+    margin-top: 30px;
+  }
 }
 
 .apartment__price {
   margin-top: 80px;
+  @include mobile {
+    margin-top: 50px;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+.apartment__price .text {
+  @include mobile {
+    font-size: 10px;
+  }
+}
+
+.apartment__photo-info {
+  @include mobile {
+    display: none;
+  }
 }
 
 .apartment__scheme {
   background-color: var(--color-gray-400);
   overflow: hidden;
   border-radius: 40px;
-  width: 100%;
+}
+
+.apartment__scheme-img {
+  object-fit: contain;
 }
 
 .apartment__photos {
@@ -50,4 +139,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.apartment__photo-info.apartment__photo-info--mobile {
+  display: none;
+  @include mobile {
+    display: block;
+    margin: 40px 0 40px;
+  }
 }

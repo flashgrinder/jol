@@ -4,7 +4,7 @@ import gsReveal from './modules/gs-reveal.js';
 document.addEventListener('DOMContentLoaded', ()=> {
 
     mobileNav();
-    gsReveal.init();
+    // gsReveal.init();
     gallerySlider();
 
     const btnToUp = document.querySelector('.js-button-to-up');

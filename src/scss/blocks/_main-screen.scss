@@ -7,7 +7,7 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 100px;
   @include mobile {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 40px;
   }
 }
@@ -81,15 +81,31 @@
 .main-screen__mobile-action {
   display: none;
   text-align: center;
+  gap: 11px;
   font-size: 16px;
   font-weight: normal;
   color: var(--color-black);
-  padding: 10px 13px 10px 28px;
+  padding: 11px 13px 11px 28px;
   background-color: #F7F9FB;
   border-radius: 16px;
   max-width: 172px;
   margin: 0 auto 40px;
   @include mobile {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
   }
+}
+
+.main-screen__mobile-action-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  width: 46px;
+  height: 46px;
+  background-color: #F1F1F1;
+}
+
+.main-screen__arrow-icon {
+  fill: var(--color-black);
 }

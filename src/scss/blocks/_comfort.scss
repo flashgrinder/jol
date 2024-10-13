@@ -1,0 +1,138 @@
+.comfort {
+  background-color: #F0F6FF;
+  padding: 110px 0 50px;
+  @include mobile {
+    padding: 100px 0 25px;
+  }
+}
+
+.comfort__heading {
+  @include mobile {
+    text-align: left;
+    font-size: 38px;
+  }
+}
+
+.comfort__heading-accent {
+  color: var(--accent-title);
+}
+
+.comfort__grid {
+  background-color: var(--color-white);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  border: 10px solid var(--color-white);
+  margin-top: 30px;
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-auto-rows: 1fr;
+    border-width: 4px;
+    gap: 4px;
+  }
+}
+
+.comfort__card:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.comfort__card:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 5;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center 70%;
+  background-size: cover;
+  @include mobile {
+    background-position: center;
+    order: -1;
+  }
+}
+
+.comfort__card:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 2;
+  @include mobile {
+    display: none;
+  }
+}
+
+.comfort__card:nth-child(4) {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.comfort__card:nth-child(5) {
+  grid-area: 2 / 3 / 3 / 4;
+}
+
+.comfort__card:nth-child(6) {
+  grid-area: 2 / 4 / 3 / 5;
+}
+.comfort__card:nth-child(7) {
+  grid-area: 3 / 1 / 4 / 2;
+}
+.comfort__card:nth-child(8) {
+  grid-area: 3 / 2 / 4 / 3;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+}
+
+.comfort__card:nth-child(9) {
+  grid-area: 3 / 3 / 4 / 4;
+}
+
+.comfort__card:nth-child(10) {
+  grid-area: 3 / 4 / 4 / 5;
+}
+
+.comfort__card:nth-child(3),
+.comfort__card:nth-child(5),
+.comfort__card:nth-child(10) {
+  @include mobile {
+    display: none;
+  }
+}
+
+.comfort__card:nth-child(1),
+.comfort__card:nth-child(2),
+.comfort__card:nth-child(3),
+.comfort__card:nth-child(4),
+.comfort__card:nth-child(5),
+.comfort__card:nth-child(6),
+.comfort__card:nth-child(7),
+.comfort__card:nth-child(8),
+.comfort__card:nth-child(9),
+.comfort__card:nth-child(10) {
+  @include mobile {
+    grid-area: auto;
+  }
+}
+
+.comfort__card {
+  position: relative;
+  padding: 30px 5px 40px 30px;
+  background-color: #F0F6FF;
+  @include mobile {
+    padding: 30px;
+  }
+}
+
+.comfort__card::before {
+  content: attr(data-num);
+  position: absolute;
+  color: var(--accent-title);
+  font-size: responsive 20px 30px;
+  font-range: 576px 1024px;
+  right: 20px;
+  bottom: 10px;
+}
+
+.comfort__card-description {
+  margin-top: 33px;
+  @include mobile {
+    margin-top: 10px;
+    font-size: 15px;
+  }
+}

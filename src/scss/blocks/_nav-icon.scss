@@ -26,6 +26,10 @@
 	height: calc(var(--line-height) * 3 + var(--spacing) * 2);
 	width: var(--width);
 	--color: var(--color-black);
+	@include mobile {
+		--width: 36px;
+		--color: #5A5757;
+	}
 }
 
 .mobile-nav__btn-icon {
