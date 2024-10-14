@@ -5,27 +5,27 @@
 			<nav class="footer__menu menu">
 				<ul class="footer__menu-list menu__list">
 					<li class="footer__menu-item menu__item">
-						<a href="" class="footer__menu-link menu__link">
+						<a href="#about" class="footer__menu-link menu__link">
 							О проекте
 						</a>
 					</li>
 					<li class="footer__menu-item menu__item">
-						<a href="" class="footer__menu-link menu__link">
+						<a href="#features" class="footer__menu-link menu__link">
 							Преимущества
 						</a>
 					</li>
 					<li class="footer__menu-item menu__item">
-						<a href="" class="footer__menu-link menu__link">
+						<a href="#gallery" class="footer__menu-link menu__link">
 							Галерея
 						</a>
 					</li>
 					<li class="footer__menu-item menu__item">
-						<a href="" class="footer__menu-link menu__link">
+						<a href="#apartments" class="footer__menu-link menu__link">
 							Планировки
 						</a>
 					</li>
 					<li class="footer__menu-item menu__item">
-						<a href="" class="footer__menu-link menu__link">
+						<a href="#contacts" class="footer__menu-link menu__link">
 							Контакты
 						</a>
 					</li>
