@@ -13,6 +13,7 @@ function mobileNav() {
 		link.addEventListener('click', () => {
 			nav.classList.remove('is-open');
 			menuIcon.classList.remove('is-active');
+			menuIconMainScreen.classList.remove('is-active');
 		})
 	});
 
@@ -26,7 +27,7 @@ function mobileNav() {
 		navMainScreen.classList.toggle('is-open');
 		menuIconMainScreen.classList.toggle('is-active');
 		document.body.classList.toggle('no-scroll');
-		document.body.parentNode.classList.toggle('no-scroll');
+		document.html.style.overflow = 'hidden';
 	};
 
 	const header = document.querySelector('.header');
