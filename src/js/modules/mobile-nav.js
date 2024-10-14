@@ -7,6 +7,15 @@ function mobileNav() {
 	const menuIcon = document.querySelector('.js-mobile-nav-icon');
 	const menuIconMainScreen = document.querySelector('.js-mobile-nav-icon-main-screen');
 
+	const anchorLinks = document.querySelectorAll('.js-anchor-link'); // .js-anchor-link .menu__link
+
+	anchorLinks.forEach(link => {
+		link.addEventListener('click', () => {
+			nav.classList.remove('is-open');
+			menuIcon.classList.remove('is-active');
+		})
+	});
+
 	navBtn.onclick = function () {
 		nav.classList.toggle('is-open');
 		menuIcon.classList.toggle('is-active');
