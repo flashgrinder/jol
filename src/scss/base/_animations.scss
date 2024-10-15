@@ -12,7 +12,7 @@
 .gs-reveal-left {
   transform: translate3d(-100px, 0, 0);
   opacity: 0;
-  transition: transform ease-in-out 0.5s 1s, opacity 0.5s ease-in-out 1s;
+  transition: transform ease-in-out 0.5s 2s, opacity 0.5s ease-in-out .2s;
   &.is-revealed {
     transform: translate3d(0,0,0);
     opacity: 1;
@@ -22,7 +22,7 @@
 .gs-reveal-right {
   transform: translate3d(100px, 0, 0);
   opacity: 0;
-  transition: transform ease-in-out 0.5s 1s, opacity 0.5s ease-in-out 1s;
+  transition: transform ease-in-out 0.5s .2s, opacity 0.5s ease-in-out .2s;
   &.is-revealed {
     transform: translate3d(0,0,0);
     opacity: 1;

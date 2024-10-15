@@ -106,6 +106,7 @@
 .apartment__price .text {
   @include mobile {
     font-size: 10px;
+    display: block;
   }
 }
 

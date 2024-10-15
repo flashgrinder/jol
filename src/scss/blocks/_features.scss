@@ -48,6 +48,9 @@
   width: 30px;
   height: 30px;
   bottom: 6px;
+  @include mobile {
+    bottom: auto;
+  }
 }
 
 .features__list-item.features__list-item--walking::before {

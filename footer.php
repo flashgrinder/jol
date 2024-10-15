@@ -53,11 +53,11 @@
 				</div>
 			</div>
 			<a href="/" class="footer__logo">
-				<img src="./img/logo-white.svg" alt="" class="footer__logo-img">
+				<img src="<?= STANDART_DIR; ?>/img/logo-white.svg" alt="" class="footer__logo-img">
 			</a>
 			<button class="footer__button-up d-flex flex-align-center flex-justify-center js-button-to-up">
 				<svg class="footer__button-up-icon" width="38px" height="20px">
-					<use href="./img/svgsprite/sprite.symbol.svg#arrow-up"></use>
+					<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#arrow-up"></use>
 				</svg>
 			</button>
 		</div>

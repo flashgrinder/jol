@@ -48,8 +48,8 @@
   padding: 50px 42px 30px;
   overflow-x: hidden;
   border-radius: 20px;
-  @include mobileXS {
-    padding: 16px 15px 30px;
+  @include mobile {
+    padding: 10px;
     max-width: 100%;
   }
 }
@@ -87,11 +87,19 @@
 
 .modal__logo-img {
   max-width: 162px;
+  @include mobile {
+    max-width: 100px;
+  }
 }
 
 .modal__title {
   font-size: 45px;
   margin-top: 40px;
+  @include mobile {
+    font-size: 25px;
+    margin-top: 15px;
+    text-align: center;
+  }
 }
 
 /* Succes */
@@ -135,6 +143,10 @@
   font-weight: 300;
   color: #CCC6C6;
   margin-bottom: 8px;
+  @include mobile {
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
 }
 
 .modal__field {
@@ -160,6 +172,9 @@
   border-radius: 6px;
   border: 1px solid #8D8D8D;
   color: #cecece;
+  @include mobile {
+    padding: 10px;
+  }
 }
 
 .modal__input:focus,
@@ -177,6 +192,9 @@
   max-height: 58px;
   min-width: 100%;
   max-width: 516px;
+  @include mobile {
+    max-height: 39px;
+  }
 }
 
 .modal__actions {
@@ -194,6 +212,10 @@
   flex-direction: column;
   color: #cecece;
   margin-top: 23px;
+  @include mobile {
+    margin-top: 12px;
+    font-size: 12px;
+  }
 }
 
 .modal__acceptance .wpcf7-form-control-wrap + .wpcf7-form-control-wrap {
@@ -202,6 +224,9 @@
 
 .modal__footer {
   margin-top: 50px;
+  @include mobile {
+    margin-top: 25px;
+  }
 }
 
 .modal__contact {

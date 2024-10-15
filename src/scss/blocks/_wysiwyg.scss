@@ -43,6 +43,9 @@
   font-range: 360px 1440px;
   font-weight: 400;
   margin-left: 0;
+  @include mobile {
+    padding-left: 25px;
+  }
 }
 
 .wysiwyg ul li ~ li,
@@ -64,6 +67,12 @@
   margin-right: 15px;
   position: absolute;
   left: -40px;
+  @include mobile {
+    content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkiIGhlaWdodD0iMTEiIHZpZXdCb3g9IjAgMCAxOSAxMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE4LjIzMjEgNS42MTM0MkMxOC40OTQ4IDUuMzUwNjggMTguNDk0OCA0LjkyNDcxIDE4LjIzMjEgNC42NjE5N0wxMy45NTA2IDAuMzgwNDY4QzEzLjY4NzkgMC4xMTc3MzQgMTMuMjYxOSAwLjExNzczNCAxMi45OTkxIDAuMzgwNDY4QzEyLjczNjQgMC42NDMyMDMgMTIuNzM2NCAxLjA2OTE4IDEyLjk5OTEgMS4zMzE5MUwxNi44MDQ5IDUuMTM3N0wxMi45OTkxIDguOTQzNDhDMTIuNzM2NCA5LjIwNjIxIDEyLjczNjQgOS42MzIxOSAxMi45OTkxIDkuODk0OTJDMTMuMjYxOSAxMC4xNTc3IDEzLjY4NzkgMTAuMTU3NyAxMy45NTA2IDkuODk0OTJMMTguMjMyMSA1LjYxMzQyWk0wLjczNzMwNSA1LjgxMDQ3SDE3Ljc1NjRWNC40NjQ5MkgwLjczNzMwNVY1LjgxMDQ3WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==");
+    margin-right: 0;
+    width: 15px;
+    left: -25px;
+  }
 }
 
 .wysiwyg table {
