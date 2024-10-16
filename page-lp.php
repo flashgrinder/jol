@@ -1,4 +1,4 @@
-<?php /* Template Name: Район Фрунзенская набережная */?>
+<?php /* Template Name: Лендинг */?>
 <?php get_header(); ?>
 
 	<section class="main-screen">
@@ -7,10 +7,10 @@
 				<div class="main-screen__info js-reveal gs-reveal-left d-flex d-flex-column flex-align-center flex-justify-sb">
 					<div class="main-screen__header d-flex flex-justify-sb flex-align-center">
 						<a href="/" class="main-screen__logo">
-							<img src="<?= STANDART_DIR; ?>/img/logo.png" alt="" class="main-screen__logo">
+							<img src="<?= STANDART_DIR; ?>/img/logo.svg" alt="" class="main-screen__logo">
 						</a>
 						<div class="main-screen__actions d-flex flex-align-center">
-							<a href="tel:+7 915 118-80-80" class="main-screen__phone d-flex flex-align-center flex-justify-center">
+							<a href="tel:+7 915 118 80 80" class="main-screen__phone d-flex flex-align-center flex-justify-center">
 								<svg class="main-screen__phone-icon" width="27px" height="29px">
 									<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
 								</svg>
@@ -34,7 +34,7 @@
 						</h1>
 					</div>
 					<div class="main-screen__bottom d-flex flex-justify-sb flex-align-center">
-						<a href="tel:+7 915 118-80-80" class="main-scree__button button button--phone">
+						<a href="tel:+7 915 118 80 80" class="main-scree__button button button--phone">
 						<span class="button__icon">
 							<svg class="button__phone-icon" width="23px" height="25px">
 								<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
@@ -272,7 +272,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
+						<a href="tel:+799990855155" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">
@@ -358,7 +358,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
+						<a href="tel:+799990855155" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">
@@ -444,7 +444,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
+						<a href="tel:+799990855155" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">

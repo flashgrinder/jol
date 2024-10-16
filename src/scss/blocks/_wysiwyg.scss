@@ -51,6 +51,9 @@
 .wysiwyg ul li ~ li,
 .wysiwyg ol li ~ li {
   margin-top: 10px;
+  @include mobile {
+    margin-top: 26px;
+  }
 }
 
 .wysiwyg.wysiwyg--delivery ul li ~ li {
@@ -126,5 +129,11 @@
 
 .wysiwyg.wysiwyg--apartment ul,
 .wysiwyg.wysiwyg--apartment ol {
+  font-family: var(--font-secondary);
   column-count: 2;
+}
+
+.wysiwyg.wysiwyg--apartment {
+  font-size: responsive 15px 25px;
+  font-range: 768px 1024px;
 }

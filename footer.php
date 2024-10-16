@@ -53,13 +53,18 @@
 				</div>
 			</div>
 			<a href="/" class="footer__logo">
-				<img src="<?= STANDART_DIR; ?>/img/logo-white.svg" alt="" class="footer__logo-img">
+				<img src="<?= STANDART_DIR; ?>/img/logo-white.png" alt="" class="footer__logo-img">
 			</a>
 			<button class="footer__button-up d-flex flex-align-center flex-justify-center js-button-to-up">
 				<svg class="footer__button-up-icon" width="38px" height="20px">
 					<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#arrow-up"></use>
 				</svg>
 			</button>
+		</div>
+		<div class="footer__action d-flex flex-justify-center flex-justify-center">
+			<a href="javascript:;" class="footer__policy text text--large text--w-light">
+				Положение об обработке персональных данных
+			</a>
 		</div>
 	</div>
 </footer>
@@ -73,7 +78,7 @@
 				</svg>
 			</div>
 			<div class="modal__logo">
-				<img src="<?= STANDART_DIR; ?>/img/logo-white.svg" alt=""
+				<img src="<?= STANDART_DIR; ?>/img/logo-white.png" alt=""
 				     class="modal__logo-img">
 			</div>
 			<h3 class="modal__title title title--white title--w-regular">

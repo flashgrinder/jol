@@ -48,6 +48,9 @@
   padding: 50px 42px 30px;
   overflow-x: hidden;
   border-radius: 20px;
+  @include to(1200px) {
+    padding: 28px 42px 28px;
+  }
   @include mobile {
     padding: 10px;
     max-width: 100%;
@@ -86,15 +89,18 @@
 }
 
 .modal__logo-img {
-  max-width: 162px;
+  max-width: 200px;
   @include mobile {
-    max-width: 100px;
+    max-width: 150px;
   }
 }
 
 .modal__title {
   font-size: 45px;
   margin-top: 40px;
+  @media screen and (max-height: 832px) {
+    font-size: 34px;
+  }
   @include mobile {
     font-size: 25px;
     margin-top: 15px;

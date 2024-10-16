@@ -7,10 +7,10 @@
 				<div class="main-screen__info js-reveal gs-reveal-left d-flex d-flex-column flex-align-center flex-justify-sb">
 					<div class="main-screen__header d-flex flex-justify-sb flex-align-center">
 						<a href="/" class="main-screen__logo">
-							<img src="<?= STANDART_DIR; ?>/img/logo.svg" alt="" class="main-screen__logo">
+							<img src="<?= STANDART_DIR; ?>/img/logo.png" alt="" class="main-screen__logo">
 						</a>
 						<div class="main-screen__actions d-flex flex-align-center">
-							<a href="tel:+79995515594" class="main-screen__phone d-flex flex-align-center flex-justify-center">
+							<a href="tel:+7 915 118 80 80" class="main-screen__phone d-flex flex-align-center flex-justify-center">
 								<svg class="main-screen__phone-icon" width="27px" height="29px">
 									<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
 								</svg>
@@ -23,7 +23,7 @@
 						</div>
 					</div>
 					<div class="main-screen__info-center">
-						<p class="main-screen__subtitle title title--medium title--black title--w-light text-center">
+						<p class="main-screen__subtitle text text--big text--black text--w-light text-center">
 							Пресненский район
 						</p>
 						<h1 class="main-screen__title title title--huge title--black title--w-regular text-center">
@@ -34,27 +34,27 @@
 						</h1>
 					</div>
 					<div class="main-screen__bottom d-flex flex-justify-sb flex-align-center">
-						<a href="tel:+79995515594" class="main-scree__button button button--phone">
+						<a href="tel:+7 915 118 80 80" class="main-scree__button button button--phone">
 						<span class="button__icon">
 							<svg class="button__phone-icon" width="23px" height="25px">
 								<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
 							</svg>
 						</span>
 						</a>
-						<a href="tel:+79995515594" class="main-screen__button-catalog button button--catalog">
-						<span class="button__text text text--medium text--black text--w-light">
-							Запросить полный каталог квартир
-						</span>
-							<span class="button__pic">
-							<span class="button__pic-wrap">
-								<img src="<?= STANDART_DIR; ?>/img/button-catalog.jpg" alt="Запросить полный каталог квартир" class="button__img">
+						<a href="tel:+7 915 118 80 80" class="main-screen__button-catalog button button--catalog" data-hystmodal="#feedback">
+							<span class="button__text text text--medium text--black text--w-light">
+								Запросить полный каталог квартир
 							</span>
-							<span class="button__arrow">
-								<svg class="button__arrow-svg" width="18px" height="18px">
-									<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#button-arrow-catalog"></use>
-								</svg>
+								<span class="button__pic">
+								<span class="button__pic-wrap">
+									<img src="<?= STANDART_DIR; ?>/img/button-catalog.jpg" alt="Запросить полный каталог квартир" class="button__img">
+								</span>
+								<span class="button__arrow">
+									<svg class="button__arrow-svg" width="18px" height="18px">
+										<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#button-arrow-catalog"></use>
+									</svg>
+								</span>
 							</span>
-						</span>
 						</a>
 					</div>
 				</div>
@@ -270,7 +270,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+7 915 118-80-80" class="apartment__button button button--availability">
+						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">
@@ -308,7 +308,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="apartment__price title title--large title--black title--w-medium js-reveal gs-reveal-left">
+					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-left">
 						~69.530.000 руб
 						<span class="text text--large text--gray text--w-regular">
 						уточняйте актуальную цену
@@ -359,7 +359,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+7 915 118-80-80" class="apartment__button button button--availability">
+						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">
@@ -403,7 +403,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="apartment__price title title--large title--black title--w-medium js-reveal gs-reveal-right">
+					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-right">
 						~121.900.000 руб
 						<span class="text text--large text--gray text--w-regular">
 						уточняйте актуальную цену
@@ -454,7 +454,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+7 915 118-80-80" class="apartment__button button button--availability">
+						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">
@@ -504,7 +504,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="apartment__price title title--large title--black title--w-medium js-reveal gs-reveal-left">
+					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-left">
 						~176.010.000 руб
 						<span class="text text--large text--gray text--w-regular">
 						уточняйте актуальную цену
@@ -555,7 +555,7 @@
 						</div>
 					</div>
 					<div class="apartment__actions js-reveal gs-reveal-right">
-						<a href="tel:+7 915 118-80-80" class="apartment__button button button--availability">
+						<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability">
 							Уточнить доступность
 							<span class="button__icon">
 							<svg class="button__phone-icon" width="37px" height="41px">
@@ -605,7 +605,7 @@
 							</li>
 						</ul>
 					</div>
-					<div class="apartment__price title title--large title--black title--w-medium js-reveal gs-reveal-right">
+					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-right">
 						~184.470.000 руб
 						<span class="text text--large text--gray text--w-regular">
 						уточняйте актуальную цену
@@ -638,7 +638,7 @@
 				Свяжитесь с нами любым удобным для вас способом и наш эксперт поможет вам подобрать квартиру вашей мечты в этом ЖК или из 2000 других объектов.
 			</div>
 			<div class="consult__action js-reveal gs-reveal">
-				<a href="tel:+7 915 118-80-80" class="apartment__button button button--availability"
+				<a href="javascript:;" class="apartment__button button button--availability"
 				   data-hystmodal="#feedback">
 					Получить консультацию
 					<span class="button__icon">

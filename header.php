@@ -37,7 +37,7 @@
 		<div class="mobile-nav__outer container">
 			<div class="mobile-nav__inner d-flex flex-justify-sb flex-align-center">
 				<a href="/" class="mobile-nav__logo">
-					<img src="<?= STANDART_DIR; ?>/img/logo.svg" alt=""
+					<img src="<?= STANDART_DIR; ?>/img/logo.png" alt=""
 					     class="mobile-nav__logo-img">
 				</a>
 				<button class="mobile-nav__btn mobile-nav__btn--header js-mobile-nav-btn">

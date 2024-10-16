@@ -12,7 +12,15 @@
   }
 }
 
+.main-screen__logo {
+  max-width: 327px;
+  @include mobile {
+    max-width: 250px;
+  }
+}
+
 .main-screen__subtitle {
+  margin-bottom: 40px;
   @include mobile {
     margin-top: 40px;
   }
@@ -51,6 +59,9 @@
 
 .main-screen__info-center {
   border-bottom: 11px solid #F0F6FF;
+  @include to(1500px) {
+    margin-top: 40px;
+  }
   @include mobile {
     border-width: 7px;
   }
