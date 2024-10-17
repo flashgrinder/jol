@@ -24,13 +24,10 @@
 					</div>
 					<div class="main-screen__info-center">
 						<p class="main-screen__subtitle text text--big text--black text--w-light text-center">
-							Фрунзенская
+							<?php the_field('main-screen_subtitle'); ?>
 						</p>
 						<h1 class="main-screen__title title title--huge title--black title--w-regular text-center">
-							Элитный
-							<br>
-							клубный город-парк
-							от 166 миллионов
+							<?php the_field('main-screen_title'); ?>
 						</h1>
 					</div>
 					<div class="main-screen__bottom d-flex flex-justify-sb flex-align-center">
@@ -59,7 +56,14 @@
 					</div>
 				</div>
 				<div class="main-screen__pic js-reveal gs-reveal-right">
-					<img src="<?= STANDART_DIR; ?>/img/main-screen-hmv.jpg" alt="" class="main-screen__img">
+					<?php
+                        $default_attr = [
+                            'class'	=> "main-screen__img",
+                            'alt'   => get_the_title()
+                        ];
+
+                        echo get_the_post_thumbnail( $post->ID, 'full', $default_attr );
+					?>
 				</div>
 				<a href="#apartments" class="main-screen__mobile-action">
 				<span>
@@ -80,83 +84,50 @@
 	<section class="about js-reveal gs-reveal-left" id="about">
 		<div class="about__body container">
 			<h3 class="about__title title--black title--w-regular">
-				Клубный город-парк на Фрунзенской
-				<br>
-				<span class="about__title-accent title title--accent">единственный и неповторимый.</span>
+				<?php the_field('about_title'); ?>
 			</h3>
 			<div class="about__text text text--big text--black text--w-light">
-				Для резидентов создан собственный просторный витражный парк площадью 3,1 гектара, где царит атмосфера загородной тишины и безмятежности. Это самый большой в элитном классе парк — он занимает 70% всей территории. Дома скрыты от посторонних глаз и шума мегаполиса обильной зеленью и окружены парадной сталинской застройкой.
+				<?php the_field('about_description'); ?>
 			</div>
 		</div>
-		<img src="<?= STANDART_DIR; ?>/img/other/about-bg-hmv.jpg" alt="" class="about__img js-reveal gs-reveal-right">
+		<?php
+			$about_img = get_field('about_img');
+		?>
+		<?php if(!empty($about_img)): ?>
+			<img src="<?php echo esc_url($about_img['url']); ?>" alt="<?php echo esc_attr($about_img['alt']); ?>" class="about__img js-reveal gs-reveal-right">
+		<?php endif; ?>
 	</section>
 
 	<section class="comfort js-reveal gs-reveal" id="features">
 		<div class="comfort__body container">
 			<h3 class="comfort__heading title title--huge title--black title--w-regular text-center js-reveal gs-reveal-left">
-			<span class="comfort__heading-accent">
-				Статус и комфорт
-			</span>
-				в каждом квадратном метре
+				<?php the_field('features_title'); ?>
 			</h3>
-			<div class="comfort__grid">
-				<div class="comfort__card js-reveal gs-reveal-left" data-num="01">
-					<h3 class="comfort__card-title text text--big text--black text--w-medium text--uppercase">
-						ПРЕМИАЛЬНЫЕ СИСТЕМЫ КОМФОРТА В КВАРТИРАХ
-					</h3>
-					<div class="comfort__card-description text text--large text--black text--w-light">
-						Продвинутая система вентиляции, индивидуальные системы кондиционирования, центральная система увлажнения и вода уровня бутилированной из под крана.
-					</div>
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-right" style="background-image: url('<?= STANDART_DIR; ?>/img/other/comfort.png')">
-					<!--				<img src="<?= STANDART_DIR; ?>/img/other/comfort.png" alt="" class="comfort__card-img">-->
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-left">
+			<?php if( have_rows('features') ): ?>
+				<div class="comfort__grid">
+					<?php while( have_rows('features') ): the_row();
 
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-left" data-num="02">
-					<h3 class="comfort__card-title text text--big text--black text--w-medium text--uppercase">
-						ЭЛИТНЫЙ СЕРВИС УРОВНЯ 5 ЗВЕЗДОЧНЫХ ОТЕЛЕЙ
-					</h3>
-					<div class="comfort__card-description text text--large text--black text--w-light">
-						Мытье окон и фасадов 2 раза в год, услуги курьеров и химчистки, сезонный шиномонтаж и хранение колес, клининг квартир, а также услуги сантехника, электрика и плотника не покидая территорию ЖК.
-					</div>
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-right">
+						$features_title = get_sub_field('features_title');
+						$features_description = get_sub_field('features_description');
+						$features_img = get_sub_field('features_img');
+						$features_num = get_sub_field('features_num');
 
+						?>
+						<div class="comfort__card js-reveal gs-reveal-left" <?php if(!empty($features_num)) { ?>data-num="<?= $features_num; ?>" <?php } ?> <?php if(!empty($features_img)) { ?>style="background-image: url('<?= esc_url($features_img['url']); ?>')"<?php } ?>>
+							<?php if(!empty($features_title)) { ?>
+								<h3 class="comfort__card-title text text--big text--black text--w-medium text--uppercase">
+									<?= $features_title; ?>
+								</h3>
+							<?php } ?>
+							<?php if(!empty($features_description)) { ?>
+								<div class="comfort__card-description text text--large text--black text--w-light">
+									<?= $features_description; ?>
+								</div>
+							<?php } ?>
+						</div>
+					<?php endwhile; ?>
 				</div>
-				<div class="comfort__card js-reveal gs-reveal-right" data-num="03">
-					<h3 class="comfort__card-title text text--big text--black text--w-medium text--uppercase">
-						СОБСТВЕННЫЙ ПРИВАТНЫЙ ДВОР-ПАРК
-					</h3>
-					<div class="comfort__card-description text text--large text--black text--w-light">
-						Самый большой среди элитных проектов витражный парк под высокими соснами занимает 70% всей территории. В нём сочетаются открытые и уединённые пространства.
-						<br>
-						Площадь парка — 3,1 гектара.
-					</div>
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-left" data-num="04">
-					<h3 class="comfort__card-title text text--big text--black text--w-medium text--uppercase">
-						УНИКАЛЬНАЯ КЛУБНАЯ ИНФРАСТРУКТУРА
-					</h3>
-					<div class="comfort__card-description text text--large text--black text--w-light">
-						Комплексная и разнообразная инфраструктура для спорта, отдыха и общения формирует атмосферу закрытого камерного клуба для своих, где каждый найдёт себе занятие по душе.
-					</div>
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-left" style="background-image: url('<?= STANDART_DIR; ?>/img/other/comfort-hmv-2.jpg')">
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-right" data-num="05">
-					<h3 class="comfort__card-title text text--big text--black text--w-medium text--uppercase">
-						ШИРОКИЙ ВЫБОР РОСКОШНЫХ КВАРТИР
-					</h3>
-					<div class="comfort__card-description text text--large text--black text--w-light">
-						Помимо стандартных планировок, мы можем предложить квартиры с частным бассейном, видовыми террасами, каминами, патио а также виллы и сити-хаусы с высокими потолками (до 7 метров)
-					</div>
-				</div>
-				<div class="comfort__card js-reveal gs-reveal-right">
-
-				</div>
-			</div>
+			<?php endif; ?>
 		</div>
 	</section>
 
@@ -165,35 +136,38 @@
 			<div class="features__column">
 				<div class="features__info d-flex d-flex-column flex-justify-sb js-reveal gs-reveal-left">
 					<h3 class="features__heading title title--white title--w-regular">
-						<span class="features__heading-accent">Хамовники — </span>
-						престижный район Москвы
+						<?php the_field('district_title'); ?>
 					</h3>
 					<div class="features__pic features__pic--mobile">
-						<img src="<?= STANDART_DIR; ?>/img/other/features.jpeg" alt="" class="features__img">
+						<?php
+							$district_img = get_field('district_img');
+						?>
+						<?php if(!empty($district_img)): ?>
+							<img src="<?php echo esc_url($district_img['url']); ?>" alt="<?php echo esc_attr($district_img['alt']); ?>" class="features__img js-reveal gs-reveal-right">
+						<?php endif; ?>
 					</div>
 					<div class="features__description text text--big text--white text--w-light">
-						Сейчас Хамовники пользуются популярностью из- за центрального расположения, хорошей экологии и транспортной доступности.
+						<?php the_field('district_description'); ?>
 					</div>
-					<ul class="features__list text text--big text--white text--w-regular">
-						<li class="features__list-item features__list-item--walking">
-							1 минута пешком до Москвы-реки
-						</li>
-						<li class="features__list-item features__list-item--walking">
-							6 минут пешком до парка Горького
-						</li>
-						<li class="features__list-item features__list-item--car">
-							5 минут до Кремля
-						</li>
-						<li class="features__list-item features__list-item--car">
-							4 минуты до комплекса Лужники
-						</li>
-						<li class="features__list-item features__list-item--car">
-							4 минуты до Воробьевых гор
-						</li>
-					</ul>
+					<?php if( have_rows('district-features') ): ?>
+						<ul class="features__list text text--big text--white text--w-regular">
+							<?php while( have_rows('district-features') ): the_row();
+
+								$district_features_text = get_sub_field('district-features_text');
+								$district_features_icon = get_sub_field('district-features_icon');
+
+								?>
+								<li class="features__list-item features__list-item--<?= $district_features_icon; ?>">
+									<?= $district_features_text; ?>
+								</li>
+							<?php endwhile; ?>
+						</ul>
+					<?php endif; ?>
 				</div>
 				<div class="features__pic js-reveal gs-reveal-right">
-					<img src="<?= STANDART_DIR; ?>/img/other/features-hmv.jpeg" alt="" class="features__img">
+					<?php if(!empty($district_img)): ?>
+						<img src="<?php echo esc_url($district_img['url']); ?>" alt="<?php echo esc_attr($district_img['alt']); ?>" class="features__img js-reveal gs-reveal-right">
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -209,20 +183,17 @@
 			<div class="gallery__slider-wrap">
 				<div class="gallery__splide splide js-gallery-init-slider">
 					<div class="gallery__splide-track splide__track">
-						<ul class="gallery__splide-list splide__list">
-							<li class="gallery__splide-slide splide__slide">
-								<img src="<?= STANDART_DIR; ?>/img/gallery/slide-1.jpg" alt="" class="gallery__photo">
-							</li>
-							<li class="gallery__splide-slide splide__slide">
-								<img src="<?= STANDART_DIR; ?>/img/gallery/slide-2.jpg" alt="" class="gallery__photo">
-							</li>
-							<li class="gallery__splide-slide splide__slide">
-								<img src="<?= STANDART_DIR; ?>/img/gallery/slide-3.jpg" alt="" class="gallery__photo">
-							</li>
-							<li class="gallery__splide-slide splide__slide">
-								<img src="<?= STANDART_DIR; ?>/img/gallery/slide-4.jpg" alt="" class="gallery__photo">
-							</li>
-						</ul>
+						<?php
+							$images = get_field('gallery');
+							if( $images ): ?>
+								<ul class="gallery__splide-list splide__list">
+									<?php foreach( $images as $image ): ?>
+										<li class="gallery__splide-slide splide__slide">
+											<img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" class="gallery__photo">
+										</li>
+									<?php endforeach; ?>
+								</ul>
+							<?php endif; ?>
 						<ul class="splide__pagination gallery__pagination"></ul>
 					</div>
 					<div class="gallery__splide-arrows splide__arrows">
@@ -239,7 +210,7 @@
 					</div>
 				</div>
 				<h3 class="gallery__text text text--large text--white text--w-regular js-reveal gs-reveal">
-					Вид из панорамных окон
+					<?php the_field('gallery_subtitle'); ?>
 				</h3>
 			</div>
 		</div>
@@ -509,10 +480,10 @@
 	<section class="consult" id="contacts">
 		<div class="consult__body container">
 			<h3 class="consult__title title title--super-huge title--black title--w-regular text-center js-reveal gs-reveal-left">
-				Не нашли <span class="consult__title-accent title title--accent">подходящий</span> вариант?
+				<?php the_field('consult_title'); ?>
 			</h3>
 			<div class="consult__subtitle text text--big text--black text--w-light text-center js-reveal gs-reveal-right">
-				Свяжитесь с нами любым удобным для вас способом и наш эксперт поможет вам подобрать квартиру вашей мечты в этом ЖК или из 2000 других объектов.
+				<?php the_field('consult_subtitle'); ?>
 			</div>
 			<div class="consult__action js-reveal gs-reveal">
 				<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability"
@@ -526,9 +497,7 @@
 				</a>
 			</div>
 			<div class="consult__text text text--large text--black text--w-light text-center js-reveal gs-reveal">
-				Консультация по подбору бесплатная и не обязывает к покупке.
-				<br>
-				Мы против спам-звонков, поэтому не беспокоим более 1 раза.
+				<?php the_field('consult_text'); ?>
 			</div>
 		</div>
 	</section>
