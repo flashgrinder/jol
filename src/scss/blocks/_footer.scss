@@ -38,6 +38,7 @@
 }
 
 .footer__contacts {
+	align-self: flex-start;
 	@include mobile {
 		text-align: center;
 	}
@@ -83,6 +84,7 @@
 	background-color: var(--color-white);
 	border-radius: 50%;
 	margin-left: 95px;
+	align-self: flex-start;
 	@include mobile {
 		display: none;
 	}
@@ -94,8 +96,6 @@
 }
 
 .footer__policy {
-	font-size: 30px;
-	font-weight: 300;
 	color: #909090;
 	border-bottom: 1px solid #909090;
 	margin-top: 80px;
