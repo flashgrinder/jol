@@ -1,5 +1,6 @@
 <?php /* Template Name: Лендинг */?>
 <?php get_header(); ?>
+<?php $phone_number = get_field('phone_num'); ?>
 
 	<section class="main-screen">
 		<div class="main-screen__body container">
@@ -10,7 +11,7 @@
 							<img src="<?= STANDART_DIR; ?>/img/logo.svg" alt="" class="main-screen__logo">
 						</a>
 						<div class="main-screen__actions d-flex flex-align-center">
-							<a href="tel:+7 915 118 80 80" class="main-screen__phone d-flex flex-align-center flex-justify-center">
+							<a href="tel:<?= $phone_number; ?>" class="main-screen__phone d-flex flex-align-center flex-justify-center">
 								<svg class="main-screen__phone-icon" width="27px" height="29px">
 									<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
 								</svg>
@@ -31,7 +32,7 @@
 						</h1>
 					</div>
 					<div class="main-screen__bottom d-flex flex-justify-sb flex-align-center">
-						<a href="tel:+7 915 118 80 80" class="main-scree__button button button--phone">
+						<a href="tel:<?= $phone_number; ?>" class="main-scree__button button button--phone">
 						<span class="button__icon">
 							<svg class="button__phone-icon" width="23px" height="25px">
 								<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
@@ -216,290 +217,97 @@
 		</div>
 	</section>
 
-	<section class="apartment" id="apartments">
-		<div class="apartment__body container">
-			<div class="apartment__column">
-				<div class="apartment__info">
-					<h3 class="apartment__title title title--big title--black title--w-regular js-reveal gs-reveal-left">
-						1 комнатная квартира
-					</h3>
-					<p class="apartment__subtitle text text--large text--black text--w-light js-reveal gs-reveal-left">
-						66,5 кв м, 5 этаж, с чистовой отделкой
-					</p>
-					<p class="apartment__subtitle text text--large text--black text--w-medium js-reveal gs-reveal-left">
-						Сдача в 2027 году
-					</p>
-					<div class="apartment__photo-info apartment__photo-info--mobile js-reveal gs-reveal-right">
-						<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-right">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-scheme-1-hmv.png" alt="" class="apartment__scheme-img">
-						</div>
-						<div class="apartment__photos d-flex js-reveal gs-reveal-right">
-							<div class="apartment__photo">
-								<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-1.png" alt="" class="apartment__photo-img">
-							</div>
-							<div class="apartment__photo js-reveal gs-reveal-right">
-								<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-2.png" alt="" class="apartment__photo-img">
-							</div>
-						</div>
-					</div>
-					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+799990855155" class="apartment__button button button--availability">
-							Уточнить доступность
-							<span class="button__icon">
-							<svg class="button__phone-icon" width="37px" height="41px">
-								<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
-							</svg>
-						</span>
-						</a>
-					</div>
-					<div class="apartment__wysiwyg wysiwyg wysiwyg--apartment js-reveal gs-reveal-left">
-						Просторная, светлая квартира c одной большой спальней, и видом на двор-парк.
-						<p style="color: var(--color-gray);">
-							В каждой квартире ЖК установлены окна с зеркальным покрытием, которые пропускают свет, но берегут вашу приватность.
-						</p>
-						<p style="color: var(--color-gray);">
-							Все системы комфорта (вентиляция, кондиционирование и даже канализация)  и лифты работают бесшумно.
-						</p>
-						<ul>
-							<li>
-								Зеркальные окна
-							</li>
-							<li>
-								Вид на двор-парк
-							</li>
-							<li>
-								Чистовая отделка
-							</li>
-							<li>
-								Потолки 3,4 метра
-							</li>
-							<li>
-								Шумоизоляция
-							</li>
-						</ul>
-					</div>
-					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-left">
-						~166.290.000 руб
-						<span class="text text--large text--gray text--w-regular">
-						уточняйте актуальную цену
-					</span>
-					</div>
-				</div>
-				<div class="apartment__photo-info">
-					<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-right">
-						<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-scheme-1-hmv.png" alt="" class="apartment__scheme-img">
-					</div>
-					<div class="apartment__photos d-flex js-reveal gs-reveal-right">
-						<div class="apartment__photo">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-1.png" alt="" class="apartment__photo-img">
-						</div>
-						<div class="apartment__photo js-reveal gs-reveal-right">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-2.png" alt="" class="apartment__photo-img">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+	<?php if( have_rows('apartments') ): ?>
+		<?php while( have_rows('apartments') ): the_row();
 
-	<section class="apartment apartment--revert">
-		<div class="apartment__body container">
-			<div class="apartment__column">
-				<div class="apartment__info">
-					<h3 class="apartment__title title title--big title--black title--w-regular js-reveal gs-reveal-right">
-						2 комнатная квартира
-					</h3>
-					<p class="apartment__subtitle text text--large text--black text--w-light js-reveal gs-reveal-right">
-						118,6 кв м, 9 этаж, с чистовой отделкой
-					</p>
-					<p class="apartment__subtitle text text--large text--black text--w-medium js-reveal gs-reveal-right">
-						Сдача в 2027 году
-					</p>
-					<div class="apartment__photo-info apartment__photo-info--mobile">
-						<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-left">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-scheme-2-hmv.png" alt="" class="apartment__scheme-img">
-						</div>
-						<div class="apartment__photos d-flex js-reveal gs-reveal-left">
-							<div class="apartment__photo">
-								<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-1-hmv.png" alt="" class="apartment__photo-img">
-							</div>
-							<div class="apartment__photo js-reveal gs-reveal-right">
-								<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-2-hmv.png" alt="" class="apartment__photo-img">
-							</div>
-						</div>
-					</div>
-					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+799990855155" class="apartment__button button button--availability">
-							Уточнить доступность
-							<span class="button__icon">
-							<svg class="button__phone-icon" width="37px" height="41px">
-								<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
-							</svg>
-						</span>
-						</a>
-					</div>
-					<div class="apartment__wysiwyg wysiwyg wysiwyg--apartment js-reveal gs-reveal-right">
-						Просторная, светлая квартира с 2 мастер спальнями и видом на двор-парк.
-						<p style="color: var(--color-gray);">
-							В каждой квартире ЖК установлены окна с зеркальным покрытием, которые пропускают свет, но берегут вашу приватность.
-						</p>
-						<p style="color: var(--color-gray);">
-							Все системы комфорта (вентиляция, кондиционирование и даже канализация)  и лифты работают бесшумно.
-						</p>
-						<ul>
-							<li>
-								Зеркальные окна
-							</li>
-							<li>
-								Вид на двор-парк
-							</li>
-							<li>
-								Чистовая отделка
-							</li>
-							<li>
-								Потолки 3,4 метра
-							</li>
-							<li>
-								Шумоизоляция
-							</li>
-						</ul>
-					</div>
-					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-right">
-						~285.900.000 руб
-						<span class="text text--large text--gray text--w-regular">
-						уточняйте актуальную цену
-					</span>
-					</div>
-				</div>
-				<div class="apartment__photo-info js-reveal gs-reveal-left">
-					<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-left">
-						<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-scheme-2-hmv.png" alt="" class="apartment__scheme-img">
-					</div>
-					<div class="apartment__photos d-flex js-reveal gs-reveal-left">
-						<div class="apartment__photo">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-1-hmv.png" alt="" class="apartment__photo-img">
-						</div>
-						<div class="apartment__photo js-reveal gs-reveal-left">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-2-hmv.png" alt="" class="apartment__photo-img">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+			$apartments_title = get_sub_field('apartments_title');
+			$apartments_chose = get_sub_field('apartments_chose');
+			$apartments_subtitle = get_sub_field('apartments_subtitle');
+			$apartments_date = get_sub_field('apartments_date');
+			$apartments_text = get_sub_field('apartments_text');
+			$apartments_price = get_sub_field('apartments_price');
+			$apartments_scheme = get_sub_field('apartments_scheme');
+			$apartments_photo_one = get_sub_field('apartments_photo_one');
+			$apartments_photo_two = get_sub_field('apartments_photo_two');
 
-	<section class="apartment">
-		<div class="apartment__body container">
-			<div class="apartment__column">
-				<div class="apartment__info">
-					<h3 class="apartment__title title title--big title--black title--w-regular js-reveal gs-reveal-left">
-						2 комнатная квартира
-					</h3>
-					<p class="apartment__subtitle text text--large text--black text--w-light js-reveal gs-reveal-left">
-						108,1 кв м, 10 этаж, с чистовой отделкой
-					</p>
-					<p class="apartment__subtitle text text--large text--black text--w-medium js-reveal gs-reveal-left">
-						Сдача в 2027 году
-					</p>
-					<div class="apartment__photo-info apartment__photo-info--mobile">
-						<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-right">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-scheme-3-hmv.png" alt="" class="apartment__scheme-img">
-						</div>
-						<div class="apartment__photos d-flex js-reveal gs-reveal-right">
-							<div class="apartment__photo">
-								<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-1-hmv.png" alt="" class="apartment__photo-img">
+			?>
+			<section class="apartment <?php if($apartments_chose && in_array('revert', $apartments_chose)) {?> apartment--revert <?php } ?> <?php if($apartments_chose && in_array('vertical', $apartments_chose)) {?> apartment--vertical <?php } ?>" <?php if(get_row_index() == 1) { ?> id="apartments" <?php } ?>>
+				<div class="apartment__body container">
+					<div class="apartment__column">
+						<div class="apartment__info">
+							<h3 class="apartment__title title title--big title--black title--w-regular js-reveal gs-reveal-left">
+								<?= $apartments_title; ?>
+							</h3>
+							<p class="apartment__subtitle text text--large text--black text--w-light js-reveal gs-reveal-left">
+								<?= $apartments_subtitle; ?>
+							</p>
+							<?php if(!empty($apartments_date)) { ?>
+								<p class="apartment__subtitle text text--large text--black text--w-medium js-reveal gs-reveal-left">
+									<?= $apartments_date; ?>
+								</p>
+							<?php } ?>
+							<div class="apartment__photo-info apartment__photo-info--mobile js-reveal gs-reveal-right">
+								<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-right">
+									<?php if(!empty($apartments_scheme)) { ?>
+										<img src="<?php echo esc_url($apartments_scheme['url']); ?>" alt="<?php echo esc_attr($apartments_scheme['alt']); ?>"  class="apartment__scheme-img">
+									<?php } ?>
+								</div>
+								<div class="apartment__photos d-flex js-reveal gs-reveal-right">
+									<?php if(!empty($apartments_photo_one)) { ?>
+										<div class="apartment__photo">
+											<img src="<?php echo esc_url($apartments_photo_one['url']); ?>" alt="<?php echo esc_attr($apartments_photo_one['alt']); ?>" class="apartment__photo-img">
+										</div>
+									<?php } ?>
+									<?php if(!empty($apartments_photo_one)) { ?>
+										<div class="apartment__photo js-reveal gs-reveal-right">
+											<img src="<?php echo esc_url($apartments_photo_two['url']); ?>" alt="<?php echo esc_attr($apartments_photo_two['alt']); ?>" class="apartment__photo-img">
+										</div>
+									<?php } ?>
+								</div>
 							</div>
-							<div class="apartment__photo js-reveal gs-reveal-right">
-								<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-2-hmv.png" alt="" class="apartment__photo-img">
+							<div class="apartment__actions js-reveal gs-reveal-left">
+								<a href="tel:<?= $phone_number; ?>" class="apartment__button button button--availability">
+									Уточнить доступность
+									<span class="button__icon">
+									<svg class="button__phone-icon" width="37px" height="41px">
+										<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
+									</svg>
+								</span>
+								</a>
+							</div>
+							<div class="apartment__wysiwyg wysiwyg wysiwyg--apartment js-reveal gs-reveal-left">
+								<?= $apartments_text; ?>
+							</div>
+							<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-left">
+								~<?= $apartments_price; ?> руб
+								<span class="text text--large text--gray text--w-regular">
+								уточняйте актуальную цену
+							</span>
 							</div>
 						</div>
-					</div>
-					<div class="apartment__actions js-reveal gs-reveal-left">
-						<a href="tel:+799990855155" class="apartment__button button button--availability">
-							Уточнить доступность
-							<span class="button__icon">
-							<svg class="button__phone-icon" width="37px" height="41px">
-								<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#phone-button"></use>
-							</svg>
-						</span>
-						</a>
-					</div>
-					<div class="apartment__wysiwyg wysiwyg wysiwyg--apartment js-reveal gs-reveal-left">
-						Просторная, светлая квартира с 2 мастер спальнями, видом на набережную и балконом.
-						<p style="color: var(--color-gray);">
-							В каждой квартире ЖК установлены окна с зеркальным покрытием, которые пропускают свет, но берегут вашу приватность.
-						</p>
-						<p style="color: var(--color-gray);">
-							Все системы комфорта (вентиляция, кондиционирование и даже канализация)  и лифты работают бесшумно.
-						</p>
-						<ul>
-							<li>
-								Зеркальные окна
-							</li>
-							<li>
-								Вид на набережную
-							</li>
-							<li>
-								Чистовая отделка
-							</li>
-							<li>
-								Потолки 3,4 метра
-							</li>
-							<li>
-								Балкон
-							</li>
-							<li>
-								Шумоизоляция
-							</li>
-						</ul>
-					</div>
-					<div class="apartment__price text text--black text--w-medium js-reveal gs-reveal-left">
-						~318.930.000 руб
-						<span class="text text--large text--gray text--w-regular">
-						уточняйте актуальную цену
-					</span>
-					</div>
-				</div>
-				<div class="apartment__photo-info apartment__photo-info--vertical">
-					<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-right">
-						<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-scheme-3-hmv.png" alt="" class="apartment__scheme-img">
-					</div>
-					<div class="apartment__photos d-flex js-reveal gs-reveal-right">
-						<div class="apartment__photo">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-1-hmv.png" alt="" class="apartment__photo-img">
-						</div>
-						<div class="apartment__photo js-reveal gs-reveal-right">
-							<img src="<?= STANDART_DIR; ?>/img/apartment/apartment-2-hmv.png" alt="" class="apartment__photo-img">
+						<div class="apartment__photo-info <?php if($apartments_chose && in_array('vertical', $apartments_chose)) {?> apartment__photo-info--vertical <?php } ?>">
+							<div class="apartment__scheme d-flex flex-justify-center js-reveal gs-reveal-right">
+								<?php if(!empty($apartments_scheme)) { ?>
+									<img src="<?= esc_url($apartments_scheme['url']); ?>" alt="<?= esc_attr($apartments_scheme['alt']); ?>" class="apartment__scheme-img">
+								<?php } ?>
+							</div>
+							<div class="apartment__photos d-flex js-reveal gs-reveal-right">
+								<?php if(!empty($apartments_photo_one)) { ?>
+									<div class="apartment__photo">
+										<img src="<?= esc_url($apartments_photo_one['url']); ?>" alt="<?= esc_attr($apartments_photo_one['alt']); ?>" class="apartment__photo-img">
+									</div>
+								<?php } ?>
+								<?php if(!empty($apartments_photo_two)) { ?>
+									<div class="apartment__photo js-reveal gs-reveal-right">
+										<img src="<?= esc_url($apartments_photo_two['url']); ?>" alt="<?= esc_attr($apartments_photo_two['alt']); ?>" class="apartment__photo-img">
+									</div>
+								<?php } ?>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="consult" id="contacts">
-		<div class="consult__body container">
-			<h3 class="consult__title title title--super-huge title--black title--w-regular text-center js-reveal gs-reveal-left">
-				<?php the_field('consult_title'); ?>
-			</h3>
-			<div class="consult__subtitle text text--big text--black text--w-light text-center js-reveal gs-reveal-right">
-				<?php the_field('consult_subtitle'); ?>
-			</div>
-			<div class="consult__action js-reveal gs-reveal">
-				<a href="tel:+7 915 118 80 80" class="apartment__button button button--availability"
-				   data-hystmodal="#feedback">
-					Получить консультацию
-					<span class="button__icon">
-					<svg class="button__home-icon" width="49px" height="49px">
-						<use href="<?= STANDART_DIR; ?>/img/svgsprite/sprite.symbol.svg#home"></use>
-					</svg>
-				</span>
-				</a>
-			</div>
-			<div class="consult__text text text--large text--black text--w-light text-center js-reveal gs-reveal">
-				<?php the_field('consult_text'); ?>
-			</div>
-		</div>
-	</section>
+			</section>
+		<?php endwhile; ?>
+	<?php endif; ?>
 	
 <?php get_footer(); ?>
