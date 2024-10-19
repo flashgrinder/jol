@@ -309,5 +309,30 @@
 			</section>
 		<?php endwhile; ?>
 	<?php endif; ?>
-	
+
+	<section class="consult" id="contacts">
+		<div class="consult__body container">
+			<h3 class="consult__title title title--super-huge title--black title--w-regular text-center js-reveal gs-reveal-left">
+				<?php the_field('consult_title'); ?>
+			</h3>
+			<div class="consult__subtitle text text--big text--black text--w-light text-center js-reveal gs-reveal-right">
+				<?php the_field('consult_subtitle'); ?>
+			</div>
+			<div class="consult__action js-reveal gs-reveal">
+				<a href="javascript:;" class="apartment__button button button--availability"
+				   data-hystmodal="#feedback">
+					Получить консультацию
+					<span class="button__icon">
+					<svg class="button__home-icon" width="49px" height="49px">
+						<use href="<?= STANDART_DIR; ?>./img/svgsprite/sprite.symbol.svg#home"></use>
+					</svg>
+				</span>
+				</a>
+			</div>
+			<div class="consult__text text text--large text--black text--w-light text-center js-reveal gs-reveal">
+				<?php the_field('consult_text'); ?>
+			</div>
+		</div>
+	</section>
+
 <?php get_footer(); ?>
