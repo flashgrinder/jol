@@ -12,6 +12,7 @@
 .apartment.apartment--vertical .apartment__photo-info--vertical {
   display: flex;
   gap: 20px;
+  justify-content: flex-end;
   @include mobile {
     display: none;
   }
@@ -30,7 +31,7 @@
 }
 
 .apartment.apartment--vertical.apartment--revert .apartment__column {
-  grid-template-columns: minmax(900px, 1fr) minmax(500px, 660px);
+  grid-template-columns: minmax(500px, 1fr) minmax(500px, 1fr);
   @include mobile {
     grid-template-columns: 1fr;
   }
@@ -44,8 +45,8 @@
 .apartment__column {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 50px;
-  align-items: center;
+  gap: 100px;
+  align-items: stretch;
   justify-items: stretch;
   @include mobile {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
