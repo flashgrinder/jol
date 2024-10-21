@@ -218,6 +218,7 @@
   flex-direction: column;
   color: #cecece;
   margin-top: 23px;
+  gap: 10px;
   @include mobile {
     margin-top: 12px;
     font-size: 12px;
@@ -271,4 +272,38 @@
   bottom: -37px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.modal .wpcf7 form .wpcf7-list-item {
+  margin: 0;
+}
+
+/* Policy */
+.modal.modal--policy .modal__close {
+  position: fixed;
+  right: 25px;
+}
+
+.modal.modal--policy .modal__close-svg {
+  fill: var(--color-black);
+  stroke: var(--color-black);
+}
+
+.modal.modal--policy .modal__wrap {
+  display: block;
+  flex-shrink: 1;
+  min-height: 100%;
+}
+
+.modal.modal--policy .modal__wrap,
+.modal.modal--policy .modal__body {
+  max-width: 100%;
+  background-color: var(--color-white);
+}
+
+.modal.modal--policy .modal__body {
+  display: block;
+  max-width: 1920px;
+  min-height: 100vh;
+  height: 100%;
 }

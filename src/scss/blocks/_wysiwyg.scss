@@ -137,3 +137,20 @@
   font-size: responsive 15px 25px;
   font-range: 768px 1024px;
 }
+
+.wysiwyg.wysiwyg--modal {
+  font-size: 16px;
+}
+
+.wysiwyg.wysiwyg--modal ul,
+.wysiwyg.wysiwyg--modal ol {
+  font-size: 16px;
+}
+
+.wysiwyg.wysiwyg--modal ul li::before {
+  content: none;
+}
+
+.wysiwyg.wysiwyg--modal ul li {
+  list-style: disc;
+}

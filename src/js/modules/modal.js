@@ -21,6 +21,14 @@ function modalForm(container = document) {
         backscroll: false,
     });
 
+    const modalsFormsPolicy = new HystModal({
+        linkAttributeName: "data-policy",
+        catchFocus: true,
+        waitTransitions: true,
+        backscroll: true,
+        closeOnOverlay: false,
+    });
+
 }
 
 export default modalForm
