@@ -252,7 +252,7 @@
 	</div>
 </div>
 
-<div class="modal modal--policy hystmodal js-modal-success" id="reklama" aria-hidden="true">
+<div class="modal modal--policy hystmodal js-modal-success" id="rkm" aria-hidden="true">
 	<div class="modal__wrap hystmodal__wrap">
 		<div class="modal__body hystmodal__window" role="modal window feedback" aria-modal="true">
 			<div class="modal__close" data-hystclose>
