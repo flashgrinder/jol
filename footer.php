@@ -57,7 +57,7 @@
 					<img src="<?= STANDART_DIR; ?>/img/logo-white.png" alt="" class="footer__logo-img">
 				</a>
 				<div class="footer__action d-flex flex-justify-center flex-justify-center">
-					<a href="javascript:;" class="footer__policy text text--large text--w-light">
+					<a href="javascript:;" class="footer__policy text text--large text--w-light" data-policy="#policy">
 						Положение об обработке персональных данных
 					</a>
 				</div>
