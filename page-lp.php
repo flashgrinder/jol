@@ -8,7 +8,7 @@
 				<div class="main-screen__info js-reveal gs-reveal-left d-flex d-flex-column flex-align-center flex-justify-sb">
 					<div class="main-screen__header d-flex flex-justify-sb flex-align-center">
 						<a href="/" class="main-screen__logo">
-							<img src="<?= STANDART_DIR; ?>/img/logo.svg" alt="" class="main-screen__logo">
+							<img src="<?= STANDART_DIR; ?>/img/logo.png" alt="" class="main-screen__logo">
 						</a>
 						<div class="main-screen__actions d-flex flex-align-center">
 							<a href="tel:<?= $phone_number; ?>" class="main-screen__phone d-flex flex-align-center flex-justify-center">
@@ -191,6 +191,9 @@
 									<?php foreach( $images as $image ): ?>
 										<li class="gallery__splide-slide splide__slide">
 											<img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>" class="gallery__photo">
+											<h3 class="gallery__text text text--large text--white text--w-regular js-reveal gs-reveal">
+												<?= esc_attr($image['alt']); ?>
+											</h3>
 										</li>
 									<?php endforeach; ?>
 								</ul>

@@ -100,13 +100,13 @@
 
 		?>
 
-		<script type="text/javascript" defer>
-            let title = document.title;
-            let getInput = document.querySelector('input[name="text-564"]').value;
-            let pageTitle = getInput + ' | ' + title;
-
-            console.log(pageTitle);
-		</script>
+<!--		<script type="text/javascript" defer>-->
+<!--            let title = document.title;-->
+<!--            let getInput = document.querySelector('input[name="text-564"]').value;-->
+<!--            let pageTitle = getInput + ' | ' + title;-->
+<!---->
+<!--            console.log(pageTitle);-->
+<!--		</script>-->
 
 
 		<?php
