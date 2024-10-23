@@ -213,9 +213,6 @@
 						</button>
 					</div>
 				</div>
-				<h3 class="gallery__text text text--large text--white text--w-regular js-reveal gs-reveal">
-					<?php the_field('gallery_subtitle'); ?>
-				</h3>
 			</div>
 		</div>
 	</section>
