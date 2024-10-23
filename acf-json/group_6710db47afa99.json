@@ -589,27 +589,6 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6710f6ae405db",
-            "label": "Подпись к слайдеру",
-            "name": "gallery_subtitle",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Вид из панорамных окон",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_671250f727123",
             "label": "Апартаменты",
             "name": "",
@@ -989,5 +968,5 @@
     "active": true,
     "description": "Настройки LP",
     "show_in_rest": 0,
-    "modified": 1729267650
+    "modified": 1729702771
 }
