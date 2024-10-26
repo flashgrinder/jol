@@ -1,4 +1,4 @@
-# Gulp + WebPack ТЗ Jol.Agency
+# Gulp + WebPack. Основной сайт Jol.Agency
 
 - HTML,
 - SCSS,

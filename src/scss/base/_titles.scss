@@ -7,15 +7,19 @@
 		font-range: 576px 1024px;
 	}
 	&--huge {
-		font-size: responsive 55px 90px;
+		font-size: responsive 50px 70px;
 		font-range: 576px 1024px;
 	}
 	&--big {
-		font-size: responsive 40px 55px;
+		font-size: responsive 56px 64px;
 		font-range: 576px 1024px;
 	}
 	&--large {
-		font-size: responsive 30px 40px;
+		font-size: responsive 36px 50px;
+		font-range: 576px 1024px;
+	}
+	&--pre-large {
+		font-size: responsive 25px 35px;
 		font-range: 576px 1024px;
 	}
 	&--medium {
@@ -23,31 +27,33 @@
 		font-range: 576px 1024px;
 	}
 	&--black {
-		color: var(--color-balck);
-	}
-	&--accent {
-		color: var(--accent-title);
+		color: var(--black);
 	}
 	&--white {
-		color: var(--color-white);
-	}
-	&--w-light {
-		font-weight: 300;
+		color: var(--white);
 	}
 	&--w-regular {
 		font-weight: 400;
 	}
-	&--w-medium {
-		font-weight: 500;
-	}
-	&--w-bold {
-		font-weight: 700;
-	}
 	&--uppercase {
 		text-transform: uppercase;
+	}
+	&--decor {
+		position: relative;
+	}
+	&--decor::before {
+		content: '';
+		position: absolute;
+		top: -8px;
+		right: -8px;
+		bottom: -8px;
+		left: -10px;
+		background-color: transparent;
+		border-radius: 20px;
+		border: 1px solid var(--gray);
 	}
 }
 
 .title--indent {
-	margin: 0 0 35px;
+	margin: 0 0 40px;
 }

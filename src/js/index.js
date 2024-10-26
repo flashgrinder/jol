@@ -1,11 +1,11 @@
 import mobileNav from './modules/mobile-nav.js';
 import gallerySlider from "./modules/gallery-slider";
-import gsReveal from './modules/gs-reveal.js';
+// import gsReveal from './modules/gs-reveal.js';
 import modalForm from "./modules/modal.js";
 document.addEventListener('DOMContentLoaded', ()=> {
 
     mobileNav();
-    gsReveal.init();
+    // gsReveal.init();
     gallerySlider();
     modalForm();
 

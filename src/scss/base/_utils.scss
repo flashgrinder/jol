@@ -61,3 +61,21 @@
 .b-padding-64 {
 	padding: var(--padding-block-64);
 }
+
+.bg {
+	&--dark {
+		background-color: var(--bg-dark);
+	}
+	&--milk {
+		background-color: var(--bg-milk);
+	}
+	&--milk-100 {
+		background-color: var(--bg-milk-100);
+	}
+	&--gray {
+		background-color: var(--bg-gray);
+	}
+	&--gray-100 {
+		background-color: var(--bg-gray-100);
+	}
+}

@@ -1,58 +1,59 @@
 .text {
-    font-family: var(--font-main);
-    font-style: normal;
-    margin: 0;
-    &--white {
-      color: var(--color-white);
-    }
-    &--black {
-      color: var(--color-black);
-    }
-    &--gray {
-      color: var(--color-gray);
-    }
-    &--big {
-      font-size: responsive 20px 30px;
-      font-range: 576px 1024px;
-    }
-    &--large {
-      font-size: responsive 20px 25px;
-      font-range: 576px 1024px;
-    }
-    &--medium {
-      font-size: 20px;
-    }
-    &--normal {
-      font-size: 16px;
-    }
-    &--small {
-      font-size: 14px;
-    }
-    &--tiny {
-      font-size: 12px;
-    }
-    &--black {
-      color: var(--color-black);
-    }
-    &--white {
-      color: var(--color-white);
-    }
-    &--w-light {
-      font-weight: 300;
-    }
-    &--w-regular {
-      font-weight: 400;
-    }
-    &--w-medium {
-      font-weight: 500;
-    }
-    &--w-bold {
-      font-weight: 700;
-    }
-    &--italic {
-      font-style: italic;
-    }
-    &--uppercase {
-      text-transform: uppercase;
-    }
+	font-family: var(--font-main);
+	font-style: normal;
+	margin: 0;
+	&--white {
+		color: var(--white);
+	}
+	&--black {
+		color: var(--black);
+	}
+	&--gray {
+		color: var(--gray);
+	}
+	&--gray-400 {
+		color: var(--gray-400);
+	}
+	&--gray-600 {
+		color: var(--gray-600);
+	}
+	&--gray-700 {
+		color: var(--gray-700);
+	}
+	&--big {
+		font-size: responsive 25px 35px;
+		font-range: 576px 1024px;
+	}
+	&--large {
+		font-size: responsive 20px 30px;
+		font-range: 576px 1024px;
+	}
+	&--medium {
+		font-size: responsive 16px 25px;
+		font-range: 576px 1024px;
+	}
+	&--pre-medium {
+		font-size: 20px;
+	}
+	&--normal {
+		font-size: 16px;
+	}
+	&--small {
+		font-size: 14px;
+	}
+	&--tiny {
+		font-size: 12px;
+	}
+	&--w-light {
+		font-weight: 300;
+	}
+	&--w-medium {
+		font-weight: 500;
+	}
+	&--italic {
+		font-style: italic;
+	}
+	&--uppercase {
+		text-transform: uppercase;
+	}
 }

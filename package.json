@@ -1,5 +1,5 @@
 {
-	"name": "jol_lp",
+	"name": "jol",
 	"version": "1.0.0",
 	"author": "Georgii Filipov",
 	"license": "ISC",
@@ -60,12 +60,12 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/flashgrinder/jol_lp.git"
+		"url": "git+ssh://git@github.com/flashgrinder/jol.git"
 	},
 	"bugs": {
-		"url": "https://github.com/flashgrinder/jol_lp/issues"
+		"url": "https://github.com/flashgrinder/jol/issues"
 	},
-	"homepage": "https://github.com/flashgrinder/jol_lp#readme",
+	"homepage": "https://github.com/flashgrinder/jol#readme",
 	"description": "- HTML,\r - SCSS,\r - Gulp,\r - JS",
 	"main": "gulpfile.js",
 	"scripts": {
