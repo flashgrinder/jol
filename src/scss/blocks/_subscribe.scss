@@ -1,0 +1,19 @@
+.subscribe {
+	position: relative;
+	background-color: var(--bg-dark);
+}
+
+.subscribe__text {
+	margin-top: 20px;
+	max-width: 1150px;
+}
+
+.subscribe__action {
+	margin-top: 40px;
+}
+
+.subscribe__pic {
+	@include mobile {
+		display: none;
+	}
+}

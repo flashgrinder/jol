@@ -1,0 +1,40 @@
+.social {
+	background-color: var(--bg-dark);
+	position: relative;
+	overflow: hidden;
+}
+
+.social::before,
+.social::after {
+	display: block;
+	opacity: 0.05;
+	position: absolute;
+	pointer-events: none;
+	user-select: none;
+}
+
+.social::before {
+	content: url("../img/other/union-1.svg");
+	width: 205px;
+	height: 477px;
+	bottom: -40%;
+	left: -40px;
+}
+
+.social::after {
+	content: url("../img/other/union-2.svg");
+	width: 195px;
+	height: 467px;
+	top: -55%;
+	transform: translateY(30%);
+	right: 0;
+}
+
+.social__text {
+	margin-top: 20px;
+}
+
+.social__links {
+	gap: 65px;
+	margin-top: 30px;
+}

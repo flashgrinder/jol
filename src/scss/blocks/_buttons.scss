@@ -1,19 +1,104 @@
 .button {
   font-family: var(--font-main);
-  font-weight: 500;
+  font-weight: 300;
   position: relative;
   cursor: pointer;
   display: inline-block;
   font-style: normal;
   text-decoration: none;
   text-align: center;
-  font-size: 30px;
+  font-size: 25px;
   border-radius: 50px;
-  padding: 21px;
-  z-index: 10;
+  padding: 23px;
+  z-index: 0;
   outline: var(--color-dark);
   background: transparent;
   transition: background .250s ease, color .250s ease, border .250s ease;
+}
+
+.button--primary {
+  padding: 23px 42px;
+  border: 1px solid transparent;
+  background-color: var(--bg-dark);
+  color: var(--white);
+  max-width: 407px;
+  width: 100%;
+}
+
+.button--primary:hover,
+.button--primary:target,
+.button--primary:focus {
+  color: var(--bg-dark);
+  border: 1px solid var(--bg-dark);
+  background-color: transparent;
+}
+
+.button--secondary {
+  padding: 23px 42px;
+  border: 1px solid transparent;
+  background-color: var(--gray-400);
+  color: var(--black);
+  max-width: 407px;
+  width: 100%;
+}
+
+.button--secondary:hover,
+.button--secondary:target,
+.button--secondary:focus {
+  border: 1px solid var(--gray-400);
+  background-color: transparent;
+  color: var(--gray-400);
+}
+
+.button--thirty {
+  padding: 23px 42px;
+  border: 1px solid var(--gray-400);
+  background-color: transparent;
+  color: var(--gray-400);
+  max-width: 407px;
+  width: 100%;
+}
+
+.button--thirty:hover,
+.button--thirty:target,
+.button--thirty:focus {
+  border: 1px solid transparent;
+  background-color: var(--gray-400);
+  color: var(--black);
+}
+
+.button--fourth {
+  padding: 23px 42px;
+  border: 1px solid transparent;
+  background-color: var(--white);
+  color: var(--black);
+  max-width: 407px;
+  width: 100%;
+}
+
+.button--fourth:hover,
+.button--fourth:target,
+.button--fourth:focus {
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.button--five {
+  padding: 23px 42px;
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  max-width: 407px;
+  width: 100%;
+}
+
+.button--five:hover,
+.button--five:target,
+.button--five:focus {
+  background-color: var(--white);
+  color: var(--black);
+  border: 1px solid transparent;
 }
 
 .button--availability {

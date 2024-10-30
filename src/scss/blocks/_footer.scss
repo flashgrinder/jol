@@ -1,5 +1,5 @@
 .footer {
-	background-color: var(--color-black);
+	background-color: var(--black);
 	padding: 60px 0;
 	@include mobile {
 		padding: 150px 0 50px;
@@ -8,10 +8,10 @@
 
 .footer__menu {
 	font-family: var(--font-main);
-	font-weight: normal;
+	font-weight: 300;
 	font-size: responsive 20px 30px;
 	font-range: 360px 1024px;
-	color: var(--color-white);
+	color: var(--white);
 	@include mobile {
 		display: none;
 	}
@@ -68,7 +68,7 @@
 .footer__contacts-wrap .footer__contact + .footer__contact {
 	padding-left: 10px;
 	margin-left: 10px;
-	border-left: 1px solid var(--color-white);
+	border-left: 1px solid var(--white);
 }
 
 .footer__logo {
@@ -81,7 +81,7 @@
 .footer__button-up {
 	width: 78px;
 	height: 78px;
-	background-color: var(--color-white);
+	background-color: var(--white);
 	border-radius: 50%;
 	margin-left: 95px;
 	align-self: flex-start;
@@ -92,7 +92,7 @@
 
 .footer__button-up-icon {
 	fill: transparent;
-	stroke: var(--color-black);
+	stroke: var(--black);
 }
 
 .footer__policy {

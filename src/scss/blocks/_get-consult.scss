@@ -1,0 +1,55 @@
+.get-consult {
+	background-color: var(--bg-beige);
+}
+
+.get-consult.get-consult--revert {
+	background-color: var(--white);
+}
+
+.get-consult__column {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.get-consult.get-consult--revert .get-consult__col-left {
+	order: 1;
+}
+
+.get-consult.get-consult--revert .get-consult__subtitle {
+	color: #9D9D9D;
+	max-width: 730px;
+	padding: 10px;
+	border-bottom: 3px solid #9D9D9D;
+}
+
+.get-consult.get-consult--revert .get-consult__heading {
+	margin-top: 65px;
+}
+
+.get-consult.get-consult--revert .get-consult__text {
+	margin-top: 50px;
+}
+
+.get-consult__col-left {
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.get-consult__img {
+	width: 100%;
+}
+
+.get-consult__info {
+	padding-left: 40px;
+}
+
+.get-consult__text {
+	margin-top: 30px;
+	line-height: 48px;
+}
+
+.get-consult__actions {
+	margin-top: 90px;
+	gap: 30px;
+}

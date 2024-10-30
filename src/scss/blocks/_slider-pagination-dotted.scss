@@ -1,0 +1,30 @@
+.slider-pagination-dotted.splide__pagination {
+  gap: 15px;
+  bottom: 15px;
+}
+
+.slider-pagination-dotted .slider-pagination-dotted__page {
+  height: 26px;
+  width: 26px;
+  opacity: 1;
+  background-color: #B2B2B2;
+  border: none;
+  margin: 0;
+  transition: background-color .2s linear;
+  @include mobile {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.slider-pagination-dotted .slider-pagination-dotted__page:hover {
+  background-color: var(--white);
+}
+
+.slider-pagination-dotted .slider-pagination-dotted__page.is-active {
+  background-color: var(--white);
+  transform: scale(1);
+  @include mobile {
+    width: 14px;
+  }
+}

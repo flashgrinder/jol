@@ -1,0 +1,74 @@
+.offers__text {
+	line-height: 46px;
+}
+
+.offers__actions {
+	margin-top: 70px;
+	gap: 20px;
+}
+
+.offers__button {
+	font-family: var(--font-main);
+	padding: 30px 50px;
+	max-width: 630px;
+	width: 100%;
+	font-size: 35px;
+	line-height: 1;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 15px;
+	transition: background-color var(--hover-time) ease, border var(--hover-time) ease, color var(--hover-time) ease;
+}
+
+.offers__button--catalog {
+	background-color: var(--gray);
+	border: 1px solid transparent;
+	color: var(--white);
+	font-weight: 500;
+}
+
+.offers__button--catalog .offers__button-icon {
+	stroke: var(--white);
+	transition: stroke var(--hover-time) ease;
+}
+
+.offers__button--catalog:hover,
+.offers__button--catalog:target,
+.offers__button--catalog:focus {
+	background-color: transparent;
+	border: 1px solid var(--gray);
+	color: var(--gray);
+}
+
+.offers__button--catalog:hover .offers__button-icon,
+.offers__button--catalog:target .offers__button-icon,
+.offers__button--catalog:focus .offers__button-icon {
+	stroke: var(--gray);
+}
+
+.offers__button--filter {
+	font-weight: 300;
+	color: var(--black);
+	border: 1px solid var(--gray);
+}
+
+.offers__button--filter .offers__button-icon {
+	stroke: var(--black);
+	transition: stroke var(--hover-time) ease;
+}
+
+.offers__button--filter:hover,
+.offers__button--filter:target,
+.offers__button--filter:focus {
+	background-color: var(--gray);
+	border: 1px solid transparent;
+	color: var(--white);
+}
+
+.offers__button--filter:hover .offers__button-icon,
+.offers__button--filter:target .offers__button-icon,
+.offers__button--filter:focus .offers__button-icon {
+	stroke: var(--white);
+}
